@@ -1,0 +1,50 @@
+agm-map
+{
+  height: 50vh;
+}
+.content
+{
+  padding: 30px;
+}
+.map-card
+{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+.main-card
+{
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+*
+{
+  font-family: Karla, sans-serif;
+}
+
+.bg-whitesmoke
+{
+  background-color: whitesmoke;
+}
+
+.body
+{
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: whitesmoke;
+}
+
+.order-card {
+  cursor: pointer;
+}
+
+.status {
+  color: #212121;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: small;
+}

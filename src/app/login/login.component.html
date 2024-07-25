@@ -1,0 +1,26 @@
+<div class="page">
+
+  <div class="container">
+
+    <mat-card style="margin-top: 10%; width: 50%; margin-left: 20%; margin-right: 20%">
+
+      <h2>Snatch</h2>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Email" type="email" #email>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Password" type="password" #password>
+      </mat-form-field>
+
+      <button mat-raised-button class="login-button" (click)="login(email.value, password.value)">Login</button>
+
+    </mat-card>
+
+
+
+  </div>
+
+
+</div>

@@ -1,0 +1,95 @@
+<ngx-alerts></ngx-alerts>
+<div>
+  <app-header></app-header>
+  <div class="content">
+    <div class="row">
+      <div class="col-3">
+        <mat-card class="rider-card">
+          <div *ngIf="rider">
+            <div class="text-center">
+              <img [src]="rider.user.avatar" class="avatar">
+            </div>
+            <br>
+            <div class="row m-t-10">
+              <div class="col-4">
+                Name :
+              </div>
+              <div class="col-8">
+                {{rider.user.name}}
+              </div>
+            </div>
+
+            <div class="row m-t-10">
+              <div class="col-4">
+                Mobile :
+              </div>
+              <div class="col-8">
+                {{rider.user.mobile}}
+              </div>
+            </div>
+
+            <div class="row m-t-10">
+              <div class="col-4">
+                Email :
+              </div>
+              <div class="col-8">
+                {{rider.user.email}}
+              </div>
+            </div>
+
+            <div class="row m-t-10">
+              <div class="col-4">
+                Vehicle :
+              </div>
+              <div class="col-8">
+                {{rider.vehicle.name}} | {{rider.vehicleId}}
+              </div>
+            </div>
+
+            <div class="row m-t-10">
+              <div class="col-4">
+                Status :
+              </div>
+              <div class="col-8">
+                {{rider.status}}
+              </div>
+            </div>
+
+            <div class="row m-t-30">
+            <div class="col text-center">
+              <button mat-raised-button (click)="openAssignDialogue()" class="blue-button">Assign Delivery</button>
+            </div>
+
+            </div>
+            </div>
+          <div *ngIf="!rider" class="text-center p-l-5 p-r-5 p-t-20">
+
+            <mat-icon>
+              <svg style="width:100px;height:100px" viewBox="0 0 24 24">
+                <path fill="#767676" d="M16,6H6L1,12V15H3A3,3 0 0,0 6,18A3,3 0 0,0 9,15H15A3,3 0 0,0 18,18A3,3 0 0,0 21,15H23V12C23,10.89 22.11,10 21,10H19L16,6M6.5,7.5H10.5V10H4.5L6.5,7.5M12,7.5H15.5L17.46,10H12V7.5M6,13.5A1.5,1.5 0 0,1 7.5,15A1.5,1.5 0 0,1 6,16.5A1.5,1.5 0 0,1 4.5,15A1.5,1.5 0 0,1 6,13.5M18,13.5A1.5,1.5 0 0,1 19.5,15A1.5,1.5 0 0,1 18,16.5A1.5,1.5 0 0,1 16.5,15A1.5,1.5 0 0,1 18,13.5Z" />
+              </svg>
+            </mat-icon>
+
+            <p class="m-t-30">Choose a rider from map to assign a delivery!</p>
+
+          </div>
+
+        </mat-card>
+      </div>
+      <div class="col-9">
+        <mat-card class="map-card" *ngIf="socket.lat !== 0">
+          <agm-map [latitude]="socket.lat" [longitude]="socket.lng" [zoom]="16" [styles]="style" *ngIf="socket.riders.length > 0">
+            <agm-marker [latitude]="rider.lat" [longitude]="rider.lng" *ngFor="let rider of socket.riders" (markerClick)="openRiderDetails(rider)">
+              <agm-info-window [disableAutoPan]="false" #infoWindow>
+                <div>
+                  {{rider.user.name}}
+                </div>
+              </agm-info-window>
+            </agm-marker>
+          </agm-map>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+</div>

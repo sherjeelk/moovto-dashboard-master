@@ -1,0 +1,9 @@
+<ul>
+  <li><a routerLink="/">Snatch Rider</a></li>
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/riders">Live Riders</a></li>
+  <li><a routerLink="/notifications">Notifications ({{socket.notifications.length}})</a></li>
+  <li style="float:right"><span class="red-link" (click)="logout()">Logout</span></li>
+  <li style="float:right"><span>Hi, {{username}}</span></li>
+</ul>
+<ngx-alerts></ngx-alerts>

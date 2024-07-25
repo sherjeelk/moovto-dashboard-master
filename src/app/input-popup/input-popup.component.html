@@ -1,0 +1,20 @@
+<div class="container">
+
+  <h3>{{data.title}}</h3>
+  <h6 class="m-t-5">{{data.content}}</h6>
+
+  <br>
+  <mat-form-field class="w-full">
+
+    <input matInput [placeholder]="data.label" [(ngModel)]="data.value">
+
+  </mat-form-field>
+
+
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="cancel()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data.value" cdkFocusInitial>Assign</button>
+  </div>
+
+</div>

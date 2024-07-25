@@ -1,0 +1,38 @@
+.rider-card
+{
+  min-height: 50vh;
+  max-height: 90vh;
+  height: auto;
+}
+
+.map-card
+{
+  height: 87vh;
+}
+
+.content
+{
+  background-color: whitesmoke;
+  padding: 30px;
+}
+
+agm-map
+{
+  height: 100%;
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.assign-button
+{
+
+}
+
+*
+{
+  font-family: Karla, sans-serif;
+}
