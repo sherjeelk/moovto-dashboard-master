@@ -27,12 +27,12 @@ export class AppConstants {
     NOTIFICATIONS: AppConstants.APP_API_URL + '/notifications'
 
   };
-  public static API_KEY_MAP = 'AIzaSyAClVfLA3Sforg4j8b7i70_Kp1MGpnNf4k';
+  public static API_KEY_MAP = '';
   public static IS_LOGGED_IN = false;
   public static user;
   public static token = '';
-  static FACEBOOK_ID = '561573537644778';
-  static GOOGLE_ID = '231615036695-gklc894u9a3k5ei32e01svbrld7f9nn4.apps.googleusercontent.com';
+  static FACEBOOK_ID = '';
+  static GOOGLE_ID = '';
 
 
   public static styles = [
